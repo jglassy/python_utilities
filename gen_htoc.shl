@@ -1,0 +1,21 @@
+#! /bin/bash
+# script    : gen_htoc.shl
+# invocation: ./gen_htoc.shl <granuleCatalog.ctg>
+# purpose   : Generate a set of HDF5 table of contents name-value-pair files
+# revised   : 2016-03-014T18:48:00
+# author    : joe glassy
+# notes     : All outputs current go in one directory
+
+GRANULE_CATALOG=$1
+
+if [ ! -f $GRANULE_CATALOG ] ; then
+ echo "Cannot find mandatory list of fully qualified L4_C granules!"
+ exit -1
+fi
+
+for grnPath in `cat $GRANULE_CATALOG`
+ do
+   echo "Generating HDF5 table for contents for " $grnPath
+   python ~/bin/htoc_v1.4.py $grnPath
+ done
+#
