@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
  script  : imgStatNewTest.py
+ revised : 2017-03-13T13:30:00, imgStatNewTest.py change #2 for Git 
  revised : 2017-03-13T13:22:00, imgStatNewTest.py for Git exercises only
  revised : 2017-01-16T15:17:00
  author  : Joe Glassy
@@ -34,15 +35,18 @@ def imgDriver(imgPath):
     imgMean = imgAry.mean()
     imgMin  = imgAry.min()
     imgMax  = imgAry.max()
+    # added StdDev 2017-03-13T13:33
+    imgStdDev = imgAry.std()
     # Organize results into a tuple to return
-    resultTupl= (imgMean,imgMin,imgMax)
+    resultTupl= (imgMean,imgMin,imgMax,imgStdDev)
     return resultTupl
     # end::imgDriver()
 
 # ----------------------------------------------------------------------
 def sessionClose():
     '''
-    sessionClose()
+    script: sessionClose()
+    revised: 2017-03-13T13:30:00
     '''
     print("%s session completed %s"%(os.path.basename(sys.argv[0]),time.ctime()))
     return 0
@@ -57,11 +61,11 @@ if __name__ == "__main__":
     if len(sys.argv)>= 2:
         inputImgPath = sys.argv[1]
         # more inputs will be supported in future
-    #
+    
     print("%s session started %s"%(os.path.basename(sys.argv[0]),time.ctime()))
     # Assert: only BYTE raw binary images are supported thus far
-    iMean,iMin,iMax = imgDriver(inputImgPath)
-    print("Image: %s mean %.2f min %.2f max %.2f"%(inputImgPath, iMean,iMin,iMax))
-    #
+    iMean,iMin,iMax,iStd = imgDriver(inputImgPath)
+    print("Image: %s mean %.2f min %.2f max %.2f std %.2f"%(inputImgPath, iMean,iMin,iMax,iStd))
+
     sessionClose()
     #
