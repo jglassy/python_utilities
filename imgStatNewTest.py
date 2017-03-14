@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
  script  : imgStatNewTest.py
+ revised : 2017-03-14T16:15:00, added doc only.
  revised : 2017-03-13T13:30:00, imgStatNewTest.py change #2 for Git 
  revised : 2017-03-13T13:22:00, imgStatNewTest.py for Git exercises only
  revised : 2017-01-16T15:17:00
@@ -8,8 +9,8 @@
  purpose : Implement sample python code to perform image analysis via
            statistical summary of one chosen HDF5, GeoTIFF, or 
            raw binary dataset
- version : 1.0           
- notes   : A major reason for developing this sample app is to exercise
+ version : 1.1      
+ notes   : The motivation for developing this sample app is to exercise
            a variety of GIT version control activities via my www.github.com
            account.
 '''
@@ -19,6 +20,8 @@ import time, random, uuid
 import numpy as np
 # <JMG> 2017-03-13, added import of h5py for Git exercises only
 import h5py
+
+versTag="v1.1-2017-03-14T16:16:00,jmg"
 
 # ----------------------------------------------------------------------
 def imgDriver(imgPath):
