@@ -1,8 +1,6 @@
 # python_utilities
 Initial python utilities
 purpose: Document initial Python support utilties
-revised: 2017-03-14T16:22:00-07:00-jmg
-revised: 2017-01-16T15:59:00-07:00-jmg
-revised: 2016-03-23T17:30
+revised: 2019-11-13T16:26,jmg
 notes  : Added docs to placeholder, imgStatNewTest.py.
 
